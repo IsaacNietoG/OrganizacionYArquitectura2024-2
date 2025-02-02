@@ -1,0 +1,120 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{float}
+
+%% Sets page size and margins
+\usepackage[a4paper,top=2.5cm,bottom=2.5cm,left=2cm,right=2cm]{geometry}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{float}
+\usepackage[colorinlistoftodos]{todonotes}
+
+%Author affil
+\usepackage{authblk}
+
+
+%% Title
+\title{
+		\vspace{-0.7in} 	
+		\usefont{OT1}{bch}{b}{n}
+		\begin{minipage}{3cm}
+        \vspace{-0.5in} 	
+    	\begin{center}
+    		\includegraphics[height=3.2cm]{../logo_unam.png}
+    	\end{center}
+    \end{minipage}\hfill
+    \begin{minipage}{10.7cm}
+    
+    	\begin{center}
+\normalfont \normalsize \textsc{UNIVERSIDAD NACIONAL AUTÓNOMA DE MÉXICO \\ FACULTAD DE CIENCIAS \\ Organización y Arquitectura de Computadoras } \\
+		\huge Tarea 01
+    	\end{center}
+     
+    \end{minipage}\hfill
+    \begin{minipage}{3.2cm}
+    \vspace{-0.5in} 
+    	\begin{center}
+    		\includegraphics[height=3.2cm]{../logo_fc.png}
+    	\end{center}
+    \end{minipage}
+
+\author{Nieto Gallegos Isaac Julián}
+\date{319021518}
+}
+
+ \setlength {\marginparwidth }{2cm}
+ 
+\begin{document}
+
+\maketitle
+
+\textbf{Instrucciones:} Entregar por classroom en \LaTeX, escribir su nombre y número de cuenta en su tarea, la tarea es individual.\\
+
+\begin{enumerate}
+    \item Completa la siguiente tabla haciendo las conversiones necesarias. En los casos en la expresión después del punto se extienda, pueden acotarlo a solo 3 dígitos después del punto. (3 puntos).
+
+    \begin{table}[H]
+    \centering
+    \begin{tabular}{|l|l|l|l|}
+    \hline
+    Decimal & Binario  & Octal & Hexadecimal \\ \hline
+    20.3    & 10100.010& 24.231& 14.4CC      \\ \hline
+    15      & 1111     & 17    & F           \\ \hline
+    1.1     & 1.0001   & 1.060 & 1.199       \\ \hline
+    10000   & 10011100010000& 23420 & 2710   \\ \hline
+    3.125   & 11.001   & 3.1   & 3.2         \\ \hline
+    1.5     & 1.1      & 1.4   & 1.8         \\ \hline
+    17      & 10001    & 21    & 11          \\ \hline
+    21      & 10101    & 25    & 15          \\ \hline
+    2.34375 & 10.01011 & 2.26  & 2.58        \\ \hline
+    4       & 100      & 4     & 4           \\ \hline
+    1.125   & 1.001    & 1.1   & 1.2         \\ \hline
+    63      & 111111   & 77    & 3F          \\ \hline
+    10.75   & 1010.110 & 12.6  & A.B         \\ \hline
+    6       & 110      & 6     & 6           \\ \hline
+    55.375  & 110111.011 & 67.5& 37.6        \\ \hline
+    10      & 1010     & 12    & A           \\ \hline
+    18.789  & 00010010.11001010& 22.624& 12.CA \\ \hline
+    367     & 101101111& 557   & 16F         \\ \hline
+    1.0625  & 0001.0001& 1.001 & 1.1         \\ \hline
+    3567.870& 110111101111.110111101111& 6757.6757& DEF.DEF     \\ \hline
+    \end{tabular}
+    \end{table}
+
+    \item Contesta las siguientes preguntas, considera que 1kB y 1kb es diferente. (2 puntos).
+
+    \begin{enumerate}
+        \item ¿Cuántos bits hay en 36kb?
+          Considerando que kb = kilobits entonces es inmediato que 36kb = 36,000 bits
+        \item ¿Cuántos bytes hay en 24mb?
+          Ya que 24mb = 24 megabits, entonces podríamos primero realizar la conversión y darnos cuenta que:
+          $24mb = 24,000,000 b$. Luego entonces, dividimos esto por 4 pues cada byte equivale a 4 bits. Entonces: $24mb = 6000000 bytes$
+        \item ¿Cuál es el número más grande que se puede representar con 7 dígitos en base octal? (Escribelo en base 10 y en base 8)
+        \item ¿Cuál es el número más pequeño y más grande que se pueden tener con el tipo uint16\_t de C?
+        \item ¿Por qué existen los tipos uint de C y cuáles son sus diferencias con otros tipos enteros como int o short?
+        \item ¿Cuántos bits se necesitan para poder direccionar todas las direcciones de una memoria de 500GB?
+        \item ¿Cuántos dígitos en base hexadecimal se necesitan para representar un número en base binaria de 32 bits?
+        \item ¿Quién o quiénes ganaron el premio nobel por la creación del transistor?
+    \end{enumerate}
+
+
+    \item  Escribe el siguiente circuito como una fórmula lógica y da su tabla de verdad. (3 puntos).
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.75\linewidth]{circuito.png}
+    \end{figure}
+
+    \item Explica qué hace el siguiente código, qué se va a imprimir en la terminal y por qué. Puedes usar un compilador en línea de C para ejecutar el código. (2 puntos).
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\linewidth]{image.png}
+    \end{figure}
+
+        
+\end{enumerate}
+
+\end{document}
