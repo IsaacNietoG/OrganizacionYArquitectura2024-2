@@ -1,12 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2025.2.2)  2 FEB 2025 13:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2025.2.2)  2 FEB 2025 20:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**/home/mrtaichi/Documents/Tareas/OrgArqui/Tarea01/main.tex
-(/home/mrtaichi/Documents/Tareas/OrgArqui/Tarea01/main.tex
-LaTeX2e <2023-11-01> patch level 1
-L3 programming layer <2024-02-20>
-(/usr/share/texmf-dist/tex/latex/base/article.cls
+**\nonstopmode\input main.tex
+(./main.tex (/usr/share/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
 (/usr/share/texmf-dist/tex/latex/base/size12.clo
 File: size12.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
@@ -613,42 +610,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 55--56
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts
 /enc/dvips/cm-super/cm-super-t1.enc} <../logo_unam.png> <../logo_fc.png>]
-<circuito.png, id=20, 435.12563pt x 159.59625pt>
+[2]
+<circuito.png, id=28, 435.12563pt x 159.59625pt>
 File: circuito.png Graphic file (type png)
 <use circuito.png>
-Package pdftex.def Info: circuito.png  used on input line 108.
+Package pdftex.def Info: circuito.png  used on input line 157.
 (pdftex.def)             Requested size: 362.77264pt x 133.06633pt.
-<image.png, id=21, 203.25937pt x 137.51375pt>
+<image.png, id=29, 203.25937pt x 137.51375pt>
 File: image.png Graphic file (type png)
 <use image.png>
-Package pdftex.def Info: image.png  used on input line 114.
+Package pdftex.def Info: image.png  used on input line 192.
 (pdftex.def)             Requested size: 241.84843pt x 163.6266pt.
-
-[2 <./circuito.png> <./image.png>] (./main.aux)
+ [3 <./circuito.png>] [4 <./image.png>] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 15290 strings out of 476076
- 298121 string characters out of 5793776
- 1943187 words of memory out of 5000000
- 37114 multiletter control sequences out of 15000+600000
+ 15293 strings out of 476076
+ 298092 string characters out of 5793776
+ 1949187 words of memory out of 5000000
+ 37118 multiletter control sequences out of 15000+600000
  571755 words of font info for 74 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 117i,8n,121p,463b,472s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 117i,8n,121p,433b,472s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/font
-s/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf-dist/fonts/type1/public/
-cm-super/sfcc1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm08
-00.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/sh
-are/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf-dist/
-fonts/type1/public/cm-super/sfrm2488.pfb>
-Output written on main.pdf (2 pages, 1220055 bytes).
+texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
+10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/sh
+are/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb></usr/share/texmf-dist/
+fonts/type1/public/cm-super/sfrm0800.pfb></usr/share/texmf-dist/fonts/type1/pub
+lic/cm-super/sfrm1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sf
+rm1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm2488.pfb>
+Output written on main.pdf (4 pages, 1255536 bytes).
 PDF statistics:
- 64 PDF objects out of 1000 (max. 8388607)
- 35 compressed objects within 1 object stream
+ 85 PDF objects out of 1000 (max. 8388607)
+ 48 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  33 words of extra memory for PDF output out of 10000 (max. 10000000)
 
