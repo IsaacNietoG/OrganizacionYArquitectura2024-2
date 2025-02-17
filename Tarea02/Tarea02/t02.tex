@@ -5,11 +5,11 @@
     \begin{tabular}{|l|l|l|l|l|l|}
     \hline
              & \begin{tabular}[c]{@{}l@{}}Entero\\ sin signo\\ (natural)\end{tabular} & \begin{tabular}[c]{@{}l@{}}Entero con\\ bit de signo\end{tabular} & \begin{tabular}[c]{@{}l@{}}Entero con\\ offset, con un\\ desplazamiento\\ de -40\end{tabular} & \begin{tabular}[c]{@{}l@{}}Complemento\\ a 1\end{tabular} & \begin{tabular}[c]{@{}l@{}}Complemento\\ a 2\end{tabular} \\ \hline
-    00000000 &                                                                        &                                                                   &                                                                                               &                                                           &                                                           \\ \hline
-    10101010 &                                                                        &                                                                   &                                                                                               &                                                           &                                                           \\ \hline
-    11110000 &                                                                        &                                                                   &                                                                                               &                                                           &                                                           \\ \hline
-    10000000 &                                                                        &                                                                   &                                                                                               &                                                           &                                                           \\ \hline
-    01111111 &                                                                        &                                                                   &                                                                                               &                                                           &                                                           \\ \hline
+    00000000 & 0 & 0 & -40 & 255 & 0\\ \hline
+    10101010 & 170 & -42 & 130 & -85 & -86\\ \hline
+    11110000 & 240 & -112 & 200 & -15 & -16\\ \hline
+    10000000 & 128 & 0 & 88 & -127 & -128\\ \hline
+    01111111 & 127 & 127 & 87 & -128 & 127 \\ \hline
     \end{tabular}
     \end{table}
 
