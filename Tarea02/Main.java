@@ -28,8 +28,8 @@ public class Main
      */
     private static int getArraySize(long n){
 
-        Long N = new Long(n);
-        return (int)Math.ceil(Math.log(N.doubleValue())/Math.log(2.0));
+        Long N = Long.valueOf(n);
+        return (int)Math.floor(Math.log(N.doubleValue())/Math.log(2.0))+1;
     }
 
     /*
@@ -71,6 +71,7 @@ public class Main
         while(n != 0){
             result[i] = !isEven(n);
             n/=2;
+            i--;
         }
 
         return result;
@@ -79,8 +80,7 @@ public class Main
     /*
      * METODO AUXILIAR
      *
-     * Azucar sintáctica para hacer un XOR exclusivo más legible en otras secciones
-     * del código.
+     * Capa de abstracción para hacer más legibles otras partes del código
      *
      * @param a
      * @param b
@@ -171,6 +171,17 @@ public class Main
         return resultado;
     }
 
+    /*
+     * METODO AUXILIAR
+     *
+     * Compara dos números binarios para encontrar cuál es más grande
+     *
+     * No considera complemento a dos ni otras representaciones para números negativos
+     *
+     * @param a
+     * @param b
+     * @return El número más grande entre a y b
+     */
     private static boolean[] getBiggerNumber(boolean[] a, boolean[] b){
         int tamanioMasCorto = a.length >= b.length ? a.length : b.length;
         boolean[] result = a;
@@ -182,6 +193,48 @@ public class Main
         }
 
         return result;
+    }
+
+    private static boolean[] restaBinariaSignada(boolean[] a, boolean[] b){
+        if(a.length != b.length){
+            //No admito arreglos de diferente tamaño de bits
+            throw new IllegalArgumentException("Resta de numeros de distinta longitud no implementada");
+        }
+
+        boolean[] result = new boolean[a.length];
+        boolean borrow = false;
+
+        // Recorremos de derecha a izquierda (bit menos significativo a más significativo)
+        // Paramos antes de llegar al bit más significativo, pues este es el bit de signo
+        for (int i = a.length - 1; i > 0; i--) {
+            if (borrow) {
+                if (a[i]) {
+                    a[i] = false; // "Pedimos prestado", lo convertimos en 0
+                    borrow = false;
+            } else {
+                a[i] = true; // Sigue el préstamo
+            }
+        }
+
+        // Realizamos la resta bit a bit: a[i] - b[i] - borrow
+        if (a[i] && !b[i]) {
+            result[i] = true;  // 1 - 0 = 1
+        } else if (!a[i] && b[i]) {
+            result[i] = true;  // 0 - 1 requiere préstamo
+            borrow = true;
+        } else {
+            result[i] = false; // 0 - 0 = 0 o 1 - 1 = 0
+        }
+    }
+
+    // Si hay un préstamo pendiente al final, significa que la resta afecta al bit de signo.
+    if (borrow) {
+        throw new ArithmeticException("Overflow detectado en resta binaria");
+    }
+
+    return result;
+
+
     }
     
     /* 
@@ -222,10 +275,11 @@ public class Main
             System.arraycopy(a, 1, magnitudA, 0, 7);
             System.arraycopy(b, 1, magnitudB, 0, 7);
 
-            boolean[] numeroGrande = getBiggerNumber(magnitudA, magnitudB);
-            boolean[] numeroChico = numeroGrande == magnitudA? magnitudB : magnitudA;
+            boolean[] numeroGrande = getBiggerNumber(magnitudA, magnitudB) == magnitudA ? a : b;
+            boolean[] numeroChico = numeroGrande == a? b : a;
 
-
+            result = restaBinariaSignada(numeroGrande, numeroChico);
+            result[0] = numeroGrande[0];
 
         }
 
