@@ -1,0 +1,40 @@
+\section*{Circuitos}
+
+\begin{enumerate}
+    \item Demuestra que las compuertas NAND y NOR son universales (2 puntos)
+    \item Dado que ya sabes implementar un Half Adder (HA) utilizando compuertas lógicas, ahora debes diseñar e implementar un Full Adder (FA) combinando dos Half Adders y una compuerta OR. (3 puntos)
+    \begin{enumerate}
+        \item Usa dos Half Adders para sumar los bits de entrada A y B junto con el bit de acarreo de entrada $C_{in}$.
+        \item Usa una compuerta OR para combinar los acarreo intermedios y obtener el $C_{out}$.
+        \item Implementa el circuito usando compuertas lógicas básicas.
+        \item \textbf{Entrega en tu PDF} la expresión booleana simplificada del Full Adder.
+    \end{enumerate}
+    \item Implementa el full adder usando únicamente compuertas NAND (3 puntos)
+    \item Da la expresión lógica asociada a la siguiente tabla de verdad usando su forma canónica disyuntiva, luego minimiza esa expresión usando mapas de Karnaugh e implementa un circuito equivalente a esa expresión. (Adjunta el mapa de Karnaugh a la tarea). (2 puntos).
+
+    \begin{table}[H]
+    \centering
+    \begin{tabular}{|l|l|l|l|l|}
+    \hline
+    X & Y & Z & W & Output \\ \hline
+    0 & 0 & 0 & 0 & 0      \\ \hline
+    0 & 0 & 0 & 1 & 1      \\ \hline
+    0 & 0 & 1 & 0 & 0      \\ \hline
+    0 & 0 & 1 & 1 & 0      \\ \hline
+    0 & 1 & 0 & 0 & 0      \\ \hline
+    0 & 1 & 0 & 1 & 1      \\ \hline
+    0 & 1 & 1 & 0 & 1      \\ \hline
+    0 & 1 & 1 & 1 & 1      \\ \hline
+    1 & 0 & 0 & 0 & 0      \\ \hline
+    1 & 0 & 0 & 1 & 0      \\ \hline
+    1 & 0 & 1 & 0 & 1      \\ \hline
+    1 & 0 & 1 & 1 & 0      \\ \hline
+    1 & 1 & 0 & 0 & 1      \\ \hline
+    1 & 1 & 0 & 1 & 0      \\ \hline
+    1 & 1 & 1 & 0 & 1      \\ \hline
+    1 & 1 & 1 & 1 & 0      \\ \hline
+    \end{tabular}
+    \end{table}
+
+    
+\end{enumerate}
